@@ -37,6 +37,23 @@ public class LinkList {
 			 newNode.next = head;
 			 head = newNode;
 		 }
+		
+		//method to insert at particular position
+		public void addAtIndex(int value, int index) {
+			if (index == 0) {
+				insert(value);
+			} else {
+				Node  newNode = new Node(value);
+				//newNode.value = value;
+				Node nodeAtPreviousIndex = head;
+				for (int i = 0; i < index - 1; i++) {
+					nodeAtPreviousIndex = nodeAtPreviousIndex.next;
+				}
+				newNode.next = nodeAtPreviousIndex.next;
+				nodeAtPreviousIndex.next = newNode;
+			}
+		}
+		
 		//method to Display LinkList
 		public void print() 
 		 {			 
