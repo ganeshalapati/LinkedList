@@ -67,6 +67,38 @@ public class LinkList {
 			
 		 }
 		
+		//uc6 method for deleting last element of LinkList 
+		public void popLast() {
+			Node  currNode = head;
+			Node  prevNode = head;
+			while (currNode.next != null) {
+				prevNode = currNode;
+				currNode = currNode.next;
+			}
+			prevNode.next = null;
+		}
+		
+		 public int search(int value) 
+		 {
+		 if (head == null) 
+		 { 
+			 System.out.println("List is Empty");
+			 return -1;
+		 }
+		 int index = 1;
+		 Node tempNode = head;
+		 while (tempNode != null) 
+		 {
+			 if (tempNode.data == value) 
+			 {
+				break;
+			 }
+			 index++;
+			 tempNode = tempNode.next;
+		 }
+		 return index;
+		 }
+		
 		//method to Display LinkList
 		public void print() 
 		 {			 
