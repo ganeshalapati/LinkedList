@@ -31,6 +31,12 @@ public class LinkList {
 			 }
 			 return newNode;
 		 }
+		//method to push(Insertion at head node)
+		public void push(int data) {
+			 Node newNode = new Node(data);
+			 newNode.next = head;
+			 head = newNode;
+		 }
 		//method to Display LinkList
 		public void print() 
 		 {			 
