@@ -54,6 +54,19 @@ public class LinkList {
 			}
 		}
 		
+		//uc5 delete the first elememt in the linklist
+		public void  pop() 
+		 {
+			int popData = 0;
+			if (head == null) 
+			{
+				System.out.println("Stack is empty");
+			}
+			 popData = head.data;
+			 head = head.next;
+			
+		 }
+		
 		//method to Display LinkList
 		public void print() 
 		 {			 
